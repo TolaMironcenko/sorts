@@ -1,0 +1,10 @@
+#include <vector>
+
+void HeapSort(std::vector<int> &values)
+{
+  std::make_heap(values.begin(), values.end());
+  for (auto i = values.end(); i != values.begin(); --i)
+  {
+    std::pop_heap(values.begin(), i);
+  }
+}
