@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 
 void HeapSort(std::vector<int> &values)
 {

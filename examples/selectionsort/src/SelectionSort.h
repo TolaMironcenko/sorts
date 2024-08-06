@@ -1,4 +1,5 @@
 #include <vector>
+#include <algorithm>
 
 void SelectionSort(std::vector<int>& values) {
   for (auto i = values.begin(); i != values.end(); ++i) {
