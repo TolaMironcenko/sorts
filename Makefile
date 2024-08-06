@@ -3,7 +3,7 @@ CXXFLAGS=-Wall -std=c++20
 SOURCES=src/main.cpp
 default: all
 
-all: bubblesort combsort heapsort insertionsort mergesort quicksort selectionsort shackersort
+all: bubblesort combsort heapsort insertionsort mergesort quicksort selectionsort shackersort sharedlib
 
 bubblesort:
 	@make -C examples/bubblesort build
@@ -29,6 +29,8 @@ selectionsort:
 shackersort:
 	@make -C examples/shackersort build
 
+sharedlib:
+	@make -C library shared
 run:
 	examples/bubblesort/bin/bubblesort
 	examples/combsort/bin/combsort
