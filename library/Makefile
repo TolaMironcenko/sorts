@@ -13,14 +13,18 @@ build:
 	@if [ ! -d bin ]; then \
 		mkdir bin; \
 	fi
-	$(CXX) -o $(TARGET) $(SOURCES) $(CXXFLAGS) -l sorts
+	$(CXX) -o $(TARGET) $(SOURCES) $(CXXFLAGS)
 
 shared:
 	$(CXX) -shared -o $(LIBRARYTARGET) $(LIBRARYSOURCES) $(CXXFLAGS)
 
 clean:
-	@rm -v $(TARGET)
-	@rm -v $(LIBRARYTARGET)
+	@if [ -f $(TARGET) ]; then \
+		rm -v $(TARGET); \
+	fi
+	@if [ -f $(LIBRARYTARGET) ]; then \
+		rm -v $(LIBRARYTARGET); \
+	fi
 	
 install:
 	install lib/libsorts.so /usr/lib

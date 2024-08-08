@@ -31,6 +31,8 @@ shackersort:
 
 sharedlib:
 	@make -C library shared
+	@make -C library build
+
 run:
 	examples/bubblesort/bin/bubblesort
 	examples/combsort/bin/combsort
@@ -40,6 +42,7 @@ run:
 	examples/quicksort/bin/quicksort
 	examples/selectionsort/bin/selectionsort
 	examples/shackersort/bin/shackersort
+	library/bin/sorts
 
 clean:
 	@if [ -f examples/bubblesort/bin/bubblesort ]; then \
@@ -74,5 +77,6 @@ clean:
 		printf "removed: "; \
 		rm -v examples/shackersort/bin/*; \
 	fi
+	@make -C library clean
 
 	
