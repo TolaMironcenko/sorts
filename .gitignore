@@ -2,4 +2,4 @@ library/bin
 library/lib/libsorts.so
 .DS_Store
 .vscode
-examples/*/bin
+examples/bubblesort/bin
